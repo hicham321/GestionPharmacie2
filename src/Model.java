@@ -53,7 +53,7 @@ public class Model {
 			String query = "INSERT INTO "+tableName+ " VALUES("+ nom +","+ age + ")";
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			System.out.println("Erreur :"+ e);
 		}
 		
