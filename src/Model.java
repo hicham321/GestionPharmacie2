@@ -59,6 +59,35 @@ public class Model {
 		
 	}
 	
+	// la requete de recherche 
+	
+	public boolean rechercheDonnee (int ID){
+		
+		boolean trouve = false;
+		
+		try{
+			
+			
+			String query="";
+			
+		    query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = "+ID ;
+		    
+		    if(query.length()!= 0){
+		    	
+			 trouve= true;
+		    }
+		   
+		
+		}catch(Exception e ){
+			
+			System.out.println("Erreur :"+ e);
+			
+		}
+		 return trouve;
+		
+		
+	}
+	
 	
 	
 

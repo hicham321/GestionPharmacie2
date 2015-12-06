@@ -61,7 +61,7 @@ public class Controller {
 				
 			}
 			if(arg0.getSource()==v.getVoirBase()){
-				// ultilise la requete pour voir la base du donnée dans model 
+				// ultilise la requete pour voir la base du donnée dans le model 
 				
 				
 			}
