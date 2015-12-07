@@ -46,13 +46,16 @@ public class Controller {
          
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
+			
 			// TODO Auto-generated method stub
 			
 			if(arg0.getSource()==v.getRechercheBtn()){
 				
-				//voir la form 1 pour la rechrche des elements 
+				//voir la form 1 pour la recherche des elements 
 				try{
+					
 				v1.setVisible(true);
+				
 				}catch(Exception e){
 					
 					System.out.println("error :" + e);
@@ -83,6 +86,31 @@ public class Controller {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			
+			if(arg0.getSource()==v1.getrecherchebtn()){
+				
+				try {
+					
+					
+					
+				} catch (Exception e) {
+					
+					System.out.println("Erreur :"+e);
+				}
+				
+			}
+			
+			if(arg0.getSource()== v1.getAnnulerbtn()){
+				
+				try {
+					
+				v1.dispose();
+				
+				} catch (Exception e) {
+					System.out.println("Erreur :"+e);
+				}
+				
+			}
+			
 		}
 		
 	}
@@ -90,6 +118,7 @@ public class Controller {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
+			
 			
 		}
 		

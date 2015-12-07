@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 //cette class est l'interface de resultat
 public class View2 extends JFrame {
 	// en entré
+	
 	private JTextField IDtext= new JTextField(10);
 	
 	
@@ -48,6 +49,16 @@ public class View2 extends JFrame {
 		this.Okbtn.addActionListener(listner);
 		
 	}
+	
+   public JTextField getIDtext (){
+	   
+	   return this.IDtext ;
+   }
+   
+   public void setIDtext( JTextField text){
+	   
+	   this.IDtext= text;
+   }
 	
 	
 	

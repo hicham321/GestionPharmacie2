@@ -19,6 +19,7 @@ public class View1 extends JFrame{
 	public View1 (){
 		
 		this.setSize(600, 300);
+		
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -41,6 +42,17 @@ public class View1 extends JFrame{
 		
 		
 	} 
+	
+	public JButton getrecherchebtn (){
+		
+		return this.recherchebtn ;
+	}
+	
+	public JButton getAnnulerbtn(){
+		
+		return this.Annulerbtn;
+		
+	}
 	
 	
 	
