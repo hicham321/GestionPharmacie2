@@ -41,6 +41,7 @@ public class View1 extends JFrame{
 		this.recherchebtn.addActionListener(listner);
 		
 		
+		
 	} 
 	
 	public JButton getrecherchebtn (){
