@@ -34,9 +34,9 @@ public class Model {
 			
 			this.con= DriverManager.getConnection("jdbc:mysql://localhost:3306/databaseName", "user", "password");
 			
-			System.out.println("connect� ....");
+			System.out.println("connection ....");
 			
-			// ici on crie un Stetement
+			// ici on crie un Statement
 			this.st= this.con.createStatement();
 					
 			
@@ -129,13 +129,21 @@ public class Model {
 		
 		
 	}
-public ResultSet recherche (int ID){
+public String recherche (int ID){
 		
-		
+	
+		String data="";
 		try{
 			
 			
 		    String query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = "+ID ;
+		    this.resultat = st.executeQuery(query);
+		    
+		    while (this.resultat.next()) {
+		    	// obtenir les chaines de character du base de donnée
+		    	
+		        data = resultat.getString(1);
+		    }
 		    
 	
 		    
@@ -162,7 +170,7 @@ public ResultSet recherche (int ID){
 		        } catch (SQLException e) { /* ignored */}
 		    }
 		}
-		 return ;
+		 return data ;
 		
 		
 	}
