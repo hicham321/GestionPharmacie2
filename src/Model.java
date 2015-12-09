@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 
@@ -29,11 +30,11 @@ public class Model {
 			// ici si la connection avec le driver 
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			System.out.println("le driver at ete chargé");
+			System.out.println("le driver at ete chargï¿½");
 			
 			this.con= DriverManager.getConnection("jdbc:mysql://localhost:3306/databaseName", "user", "password");
 			
-			System.out.println("connecté ....");
+			System.out.println("connectï¿½ ....");
 			
 			// ici on crie un Stetement
 			this.st= this.con.createStatement();
@@ -52,13 +53,29 @@ public class Model {
 	//dummy method
 	public void insertdata(String nom , int age, String tableName ){
 		try {
-			
+			this.connection();
 			
 			String query = "INSERT INTO "+tableName+ " VALUES("+ nom +","+ age + ")";
 			
 		} catch (Exception e) {
 			
 			System.out.println("Erreur :"+ e);
+		}finally {
+		    if (this.resultat != null) {
+		        try {
+		            this.resultat.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
+		    if (this.st != null) {
+		        try {
+		            this.st.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
+		    if (con != null) {
+		        try {
+		            con.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
 		}
 		
 	}
@@ -66,6 +83,8 @@ public class Model {
 	// la requete de recherche 
 	
 	public boolean recherchecondition (int ID){
+		
+		this.connection();
 		
 		boolean trouve = false;
 		
@@ -89,6 +108,22 @@ public class Model {
 			
 			System.out.println("Erreur :"+ e);
 			
+		}finally {
+		    if (this.resultat != null) {
+		        try {
+		            this.resultat.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
+		    if (this.st != null) {
+		        try {
+		            this.st.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
+		    if (con != null) {
+		        try {
+		            con.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
 		}
 		 return trouve;
 		
@@ -98,11 +133,9 @@ public ResultSet recherche (int ID){
 		
 		
 		try{
-			this.connection();
 			
-			String query="";
 			
-		    query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = "+ID ;
+		    String query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = "+ID ;
 		    
 	
 		    
@@ -112,6 +145,22 @@ public ResultSet recherche (int ID){
 			
 			System.out.println("Erreur :"+ e);
 			
+		}finally {
+		    if (this.resultat != null) {
+		        try {
+		            this.resultat.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
+		    if (this.st != null) {
+		        try {
+		            this.st.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
+		    if (con != null) {
+		        try {
+		            con.close();
+		        } catch (SQLException e) { /* ignored */}
+		    }
 		}
 		 return ;
 		

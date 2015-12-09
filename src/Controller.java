@@ -27,14 +27,12 @@ public class Controller {
 		
 		//avant tous il faut connecté avec la base 
 		
-		this.m.connection();
 
 		// ajouté des actionListner pour les actions sur l'interface 
 		
 		v.addlistnermainView(new listnerforMainView());
 		v1.addlistnerView1(new listnerForView1());
 		v2.addlistnerview2(new lisnterForView2());
-
 		
 		
 	}
@@ -90,7 +88,7 @@ public class Controller {
 				
 				try {
 					
-					//manipul� la requete pour obtenir les info
+					//manipul� la requete pour obtenir les info
 					
 					
 					

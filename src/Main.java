@@ -1,3 +1,4 @@
+// la class main 
 
 public class Main {
      // la methode main pour l'execution du programme 
