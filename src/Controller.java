@@ -90,6 +90,12 @@ public class Controller {
 				
 				try {
 					
+					//manipulé la requete pour obtenir les info
+					
+					
+					
+					
+					
 					
 					
 				} catch (Exception e) {

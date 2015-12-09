@@ -20,7 +20,7 @@ public class View1 extends JFrame{
 		
 		this.setSize(600, 300);
 		
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		

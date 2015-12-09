@@ -29,11 +29,15 @@ public class Model {
 			// ici si la connection avec le driver 
 			Class.forName("com.mysql.jdbc.Driver");
 			
+			System.out.println("le driver at ete chargé");
+			
 			this.con= DriverManager.getConnection("jdbc:mysql://localhost:3306/databaseName", "user", "password");
+			
+			System.out.println("connecté ....");
 			
 			// ici on crie un Stetement
 			this.st= this.con.createStatement();
-			
+					
 			
 		}catch(Exception e){
 			System.out.println("Erreur : "+ e);
@@ -61,7 +65,7 @@ public class Model {
 	
 	// la requete de recherche 
 	
-	public boolean rechercheDonnee (int ID){
+	public boolean recherchecondition (int ID){
 		
 		boolean trouve = false;
 		
@@ -71,6 +75,9 @@ public class Model {
 			String query="";
 			
 		    query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = "+ID ;
+		    
+		    ResultSet rs = this.st.executeQuery(query);
+
 		    
 		    if(query.length()!= 0){
 		    	
@@ -87,7 +94,29 @@ public class Model {
 		
 		
 	}
+public ResultSet recherche (int ID){
+		
+		
+		try{
+			this.connection();
+			
+			String query="";
+			
+		    query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = "+ID ;
+		    
 	
+		    
+		   
+		
+		}catch(Exception e ){
+			
+			System.out.println("Erreur :"+ e);
+			
+		}
+		 return ;
+		
+		
+	}
 	
 	
 
