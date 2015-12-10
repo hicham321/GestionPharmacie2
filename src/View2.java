@@ -55,10 +55,7 @@ public class View2 extends JFrame {
 	   return this.IDtext ;
    }
    
-   public void setIDtext( JTextField text){
-	   
-	   this.IDtext= text;
-   }
+  
 	
 	
 	

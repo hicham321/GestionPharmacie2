@@ -84,7 +84,7 @@ public class Controller {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			
-			if(arg0.getSource()==v1.getrecherchebtn()){
+			if(arg0.getSource()==v1.getrecherchebtnid()){
 				
 				try {
 					
@@ -93,7 +93,10 @@ public class Controller {
 					
 					
 					
+					// affiché l'interface de resultat
 					
+					v2.setVisible(true);
+					v2.getIDtext().setText(v1.getIDtext());;
 					
 					
 				} catch (Exception e) {
@@ -122,6 +125,8 @@ public class Controller {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
+			
+			
 			
 			
 		}

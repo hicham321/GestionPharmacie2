@@ -12,9 +12,21 @@ public class View1 extends JFrame{
 	
 	private  JTextField IDtext = new JTextField(10);
 	
+	private JTextField Nomtext = new JTextField(10);
+	
+	private JTextField PrenomText = new JTextField(10);
+	
 	private JButton Annulerbtn = new JButton("Annuler");
 	
-	private JButton recherchebtn = new JButton("Recherche");
+	private JButton recherchebtnid = new JButton("Recherche par id");
+	
+	private JButton recherchenom  = new JButton("Recherche par nom");
+	
+	private JButton rechercheprenom = new JButton("Recherche par prenom ");
+
+
+	
+	
 	
 	public View1 (){
 		
@@ -28,7 +40,11 @@ public class View1 extends JFrame{
 		
 		panel.add(Annulerbtn);
 		
-		panel.add(recherchebtn);
+		panel.add(recherchebtnid);
+		
+		panel.add(recherchenom);
+		
+		panel.add(rechercheprenom);
 		
 		this.add(panel);
 		
@@ -38,21 +54,25 @@ public class View1 extends JFrame{
 	
 	public void addlistnerView1(ActionListener listner ){
 		
-		this.recherchebtn.addActionListener(listner);
+		this.recherchebtnid.addActionListener(listner);
 		
 		
 		
 	} 
 	
-	public JButton getrecherchebtn (){
+	public JButton getrecherchebtnid (){
 		
-		return this.recherchebtn ;
+		return this.recherchebtnid ;
 	}
 	
 	public JButton getAnnulerbtn(){
 		
 		return this.Annulerbtn;
 		
+	}
+	public String getIDtext(){
+		
+		return this.IDtext.getText();
 	}
 	
 	
