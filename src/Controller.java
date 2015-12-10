@@ -97,6 +97,7 @@ public class Controller {
 					
 					v2.setVisible(true);
 					v2.getIDtext().setText(v1.getIDtext());;
+					v2.getIDtext().setEditable(false);
 					
 					
 				} catch (Exception e) {
