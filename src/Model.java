@@ -10,6 +10,9 @@ import java.sql.Statement;
 //Cette class va contenir la connection ver la base de donneé et les requetes SQL necessaire pour manipulé
 //les donnée de la base 
 
+//on va crie multiple pour chaque requete sql par ce que cette methode est plus efficase que crier un seul 
+//pour tout le program 
+
 public class Model {
 	
 	
@@ -30,7 +33,7 @@ public class Model {
 			// ici si la connection avec le driver 
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			System.out.println("le driver at ete charg�");
+			System.out.println("le driver at ete charger");
 			
 			this.con= DriverManager.getConnection("jdbc:mysql://localhost:3306/databaseName", "user", "password");
 			
@@ -131,7 +134,7 @@ public class Model {
 	}
 public String recherche (int ID){
 		
-	
+	    this.connection();
 		String data="";
 		try{
 			

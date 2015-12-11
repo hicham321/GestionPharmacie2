@@ -72,7 +72,7 @@ public class Controller {
 					
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "Cliquer un boutton  ");
+				//JOptionPane.showMessageDialog(null, "Cliquer un boutton  ");
 			}
 			
 		}
