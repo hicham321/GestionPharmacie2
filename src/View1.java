@@ -10,6 +10,8 @@ import javax.swing.JTextField;
 
 public class View1 extends JFrame{
 	
+	
+	
 	private  JTextField IDtext = new JTextField(10);
 	
 	private JTextField Nomtext = new JTextField(10);

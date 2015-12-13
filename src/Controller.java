@@ -94,10 +94,15 @@ public class Controller {
 					
 					
 					// affiché l'interface de resultat
-					
+					if (v1.getIDtext().isEmpty() || m.isInteger(v1.getIDtext())== false ) {
+						
+						JOptionPane.showMessageDialog(null, "Entrer un id numeric");
+					}
+					else{
 					v2.setVisible(true);
 					v2.getIDtext().setText(v1.getIDtext());;
 					v2.getIDtext().setEditable(false);
+					}
 					
 					
 				} catch (Exception e) {
