@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -212,12 +213,18 @@ public static boolean isInteger(String str) {
 
 public Object [] colonbase(){
 	
+	Object [] obj ={"#"};
 	try{
 		
 		
-	    String query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = " ;
+	    String query = "SELECT * FROM PERSONE  " ;
 	    this.resultat = st.executeQuery(query);
+	    ResultSetMetaData metadonnee = this.resultat.getMetaData();
 	    
+	    //recupérer les noms des colones 
+	     String colon1 = metadonnee.getColumnName(0);
+	     obj[0]= colon1;
+	     
 	    while (this.resultat.next()) {
 	    	// obtenir les chaines de character du base de donnée
 	    	
@@ -251,8 +258,10 @@ public Object [] colonbase(){
 	}
 	
 	
-	return ;
+	return obj ;
 }
+
+
 
 
 	

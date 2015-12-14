@@ -67,7 +67,7 @@ public class Controller {
 				
 				Object [] o = {"s","t"};
 				
-				v.gettable.
+				
 				
 			}
 			if(arg0.getSource()==v.getbtnAnnuler()){
