@@ -24,6 +24,11 @@ public class Model {
 	
 	private ResultSet resultat ; 
 	
+	// pour jJtable
+	
+	Object [][] ob ;
+	
+	
 	//Cette methode va crier un connection avec notre base de donnee SQL existent 
 	
 	public void connection (){
@@ -204,6 +209,52 @@ public static boolean isInteger(String str) {
     }
     return true;
 }
+
+public Object [] colonbase(){
+	
+	try{
+		
+		
+	    String query = "SELECT ID FROM PERSONE WHERE ID.PERSONE = " ;
+	    this.resultat = st.executeQuery(query);
+	    
+	    while (this.resultat.next()) {
+	    	// obtenir les chaines de character du base de donnée
+	    	
+	       
+	    }
+	    
+
+	    
+	   
+	
+	}catch(Exception e ){
+		
+		System.out.println("Erreur :"+ e);
+		
+	}finally {
+	    if (this.resultat != null) {
+	        try {
+	            this.resultat.close();
+	        } catch (SQLException e) { /* ignored */}
+	    }
+	    if (this.st != null) {
+	        try {
+	            this.st.close();
+	        } catch (SQLException e) { /* ignored */}
+	    }
+	    if (con != null) {
+	        try {
+	            con.close();
+	        } catch (SQLException e) { /* ignored */}
+	    }
+	}
+	
+	
+	return ;
+}
+
+
 	
 	
 

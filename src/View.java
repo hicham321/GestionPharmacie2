@@ -5,6 +5,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 // cette class est l'interface de demarage 
@@ -17,6 +18,12 @@ public class View extends JFrame{
 	private JButton btnRecherche = new JButton("Recherche");
 	
 	private JButton VoirBase = new JButton("VoirBase");
+	
+	private Object [][] objet2dim ;
+	
+	private Object [] objet1dim ;
+	
+	private JTable tabvoir = new JTable();
 	
 	
 
@@ -47,14 +54,33 @@ public class View extends JFrame{
 		btnAnnuler.addActionListener(listner);
 		
 	}
+	
 	public JButton getRechercheBtn (){
 		return this.btnRecherche;
 	}
+	
 	public JButton getVoirBase(){
 		return this.VoirBase;
 	}
+	
 	public JButton getbtnAnnuler(){
 		return this.btnAnnuler;
 	}
+	
+	public JTable gettable(){
+		
+		return this.tabvoir;
+	}
+	
+	public void setobjet1dim( Object [] ob){
+		
+		this.objet1dim= ob ;
+	}
+	
+	public void setobjet2dim(Object [][] ob){
+		
+		this.objet2dim= ob ;
+	}
+	
 	
 }
