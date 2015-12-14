@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 
@@ -211,6 +212,8 @@ public static boolean isInteger(String str) {
     return true;
 }
 
+//recuperer les colon de la table personne 
+
 public Object [] colonbase(){
 	
 	Object [] obj ={"#"};
@@ -230,11 +233,6 @@ public Object [] colonbase(){
 	    	
 	       
 	    }
-	    
-
-	    
-	   
-	
 	}catch(Exception e ){
 		
 		System.out.println("Erreur :"+ e);
@@ -261,6 +259,60 @@ public Object [] colonbase(){
 	return obj ;
 }
 
+// recuperer les donnée de la table persone 
+
+public Object [][] donneebase(){
+	
+	Object [][] obj ={};
+	try{
+		
+		
+	    String query = "SELECT * FROM PERSONE  " ;
+	    this.resultat = st.executeQuery(query);	
+	    
+	    int compte = 0;
+	    while (this.resultat.next()) {
+	    	// obtenir les chaines de character du base de donnée
+	    	String id = this.resultat.getString(0);
+	    	String nom = this.resultat.getString(1);
+	    	String prenom = this.resultat.getString(2);
+	    	String credit = this.resultat.getString(3);
+            
+            obj[compte][0]=id;
+            obj[compte][1]=nom;
+            obj[compte][2]=prenom;
+            obj[compte][3]=credit;
+
+           compte++; 
+	    }
+	    
+	}catch(Exception e ){
+		
+		System.out.println("Erreur :"+ e);
+		
+	}finally {
+	    if (this.resultat != null) {
+	        try {
+	            this.resultat.close();
+	        } catch (SQLException e) { /* ignored */}
+	    }
+	    if (this.st != null) {
+	        try {
+	            this.st.close();
+	        } catch (SQLException e) { /* ignored */}
+	    }
+	    if (con != null) {
+	        try {
+	            con.close();
+	        } catch (SQLException e) { /* ignored */}
+	    }
+	}
+	
+	
+	return obj ;
+	
+	
+}
 
 
 
