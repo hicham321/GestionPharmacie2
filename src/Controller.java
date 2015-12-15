@@ -63,11 +63,10 @@ public class Controller {
 			}
 			if(arg0.getSource()==v.getVoirBase()){
 				// ultilise la requete pour voir la base du donnée dans le model 
-				Object [][] ob = { {"45", "s"},{"7"}};
 				
-				Object [] o = {"s","t"};
-				
-				
+				v.setobjet1dim(m.ob1);
+				v.setobjet2dim(m.ob);
+					
 				
 			}
 			if(arg0.getSource()==v.getbtnAnnuler()){

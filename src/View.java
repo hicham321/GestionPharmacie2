@@ -23,7 +23,7 @@ public class View extends JFrame{
 	
 	private Object [] objet1dim ;
 	
-	private JTable tabvoir = new JTable();
+	private JTable tabvoir = new JTable(this.objet2dim,this.objet1dim);
 	
 	
 
@@ -39,7 +39,8 @@ public class View extends JFrame{
 		panel.add(btnAnnuler);
 		panel.add(btnRecherche);
 		panel.add(VoirBase);
-		
+		panel.add(tabvoir);
+
 		this.add(panel);
 		
 		

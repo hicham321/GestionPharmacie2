@@ -30,6 +30,8 @@ public class Model {
 	
 	Object [][] ob ;
 	
+	Object [] ob1;
+	
 	
 	//Cette methode va crier un connection avec notre base de donnee SQL existent 
 	
