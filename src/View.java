@@ -23,7 +23,7 @@ public class View extends JFrame{
 	
 	private Object [] objet1dim ;
 	
-	private JTable tabvoir = new JTable(this.objet2dim,this.objet1dim);
+	private JTable tabvoir ;
 	
 	
 
@@ -34,6 +34,14 @@ public class View extends JFrame{
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		this.setSize(600, 300);
+		
+		//pour le moment on va utilié sa 
+		
+
+		this.objet1dim= new Object[0];
+		this.objet2dim=new Object[0][0];
+		this.tabvoir=new JTable(this.objet2dim,this.objet1dim);
+
 		
 		panel.add(label);
 		panel.add(btnAnnuler);
@@ -81,6 +89,11 @@ public class View extends JFrame{
 	public void setobjet2dim(Object [][] ob){
 		
 		this.objet2dim= ob ;
+	}
+	
+	public void setObjectpourTable(Object[][] ob2, Object [] ob1){
+		
+		//         hthis.tabvoir
 	}
 	
 	

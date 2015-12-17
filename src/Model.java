@@ -157,10 +157,6 @@ public String recherche (int ID){
 		        data = resultat.getString(1);
 		    }
 		    
-	
-		    
-		   
-		
 		}catch(Exception e ){
 			
 			System.out.println("Erreur :"+ e);

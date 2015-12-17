@@ -116,14 +116,8 @@ public class Controller {
 			}
 			
 			if(arg0.getSource()== v1.getAnnulerbtn()){
-				
-				try {
 					
 				v1.dispose();
-				
-				} catch (Exception e) {
-					System.out.println("Erreur :"+e);
-				}
 				
 			}
 			

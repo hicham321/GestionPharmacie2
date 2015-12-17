@@ -6,11 +6,11 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		
+		Model m = new Model();
 		View v = new View();
 		View1 v1 = new View1();
 		View2 v2 = new View2();
-		Model m = new Model();
+		
 		
 		Controller c = new Controller (m,v,v1,v2);
 		

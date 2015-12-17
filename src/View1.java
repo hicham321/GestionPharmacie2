@@ -57,6 +57,7 @@ public class View1 extends JFrame{
 	public void addlistnerView1(ActionListener listner ){
 		
 		this.recherchebtnid.addActionListener(listner);
+		this.Annulerbtn.addActionListener(listner);
 		
 		
 		
