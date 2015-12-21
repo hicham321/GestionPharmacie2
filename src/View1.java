@@ -39,14 +39,19 @@ public class View1 extends JFrame{
 		JPanel panel = new JPanel();
 		
 		panel.add(IDtext);
-		
-		panel.add(Annulerbtn);
-		
+				
 		panel.add(recherchebtnid);
+		
+		panel.add(Nomtext);
 		
 		panel.add(recherchenom);
 		
+		panel.add(PrenomText);
+		
 		panel.add(rechercheprenom);
+		
+		panel.add(Annulerbtn);
+
 		
 		this.add(panel);
 		
@@ -58,6 +63,8 @@ public class View1 extends JFrame{
 		
 		this.recherchebtnid.addActionListener(listner);
 		this.Annulerbtn.addActionListener(listner);
+		this.Nomtext.addActionListener(listner);
+		this.PrenomText.addActionListener(listner);
 		
 		
 		
@@ -67,6 +74,17 @@ public class View1 extends JFrame{
 		
 		return this.recherchebtnid ;
 	}
+	
+    public JButton getNombtn (){
+		
+		return this.recherchenom ;
+	}
+    
+    public JButton getPrenombtn   (){
+		
+		return this.rechercheprenom ;
+	}
+	
 	
 	public JButton getAnnulerbtn(){
 		

@@ -115,6 +115,11 @@ public class Controller {
 				
 			}
 			
+			if(arg0.getSource()== v1.getNombtn()){
+				
+				
+			}
+			
 			if(arg0.getSource()== v1.getAnnulerbtn()){
 					
 				v1.dispose();
