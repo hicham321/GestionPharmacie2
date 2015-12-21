@@ -54,7 +54,7 @@ public class View2 extends JFrame {
 		
 		this.add(panel);
 		
-		
+		this.setTitle("Resultat");
 		
 	
 	}

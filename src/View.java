@@ -50,6 +50,7 @@ public class View extends JFrame{
 		panel.add(tabvoir);
 
 		this.add(panel);
+		this.setTitle("Pricipale");
 		
 		
 		

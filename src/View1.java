@@ -1,20 +1,28 @@
 
 import java.awt.event.ActionListener;
 
+import javafx.scene.text.Font;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.text.StyledEditorKit.ItalicAction;
 
 // cette class est l'interface de recherche 
 
 public class View1 extends JFrame{
 	
+	private JLabel IdLabel = new JLabel("Le ID");
 	
+	private JTextField IDtext = new JTextField(10);
 	
-	private  JTextField IDtext = new JTextField(10);
+	private JLabel Nomlabel = new JLabel("Le nom");
 	
 	private JTextField Nomtext = new JTextField(10);
+	
+	private JLabel prenomlabel = new JLabel("Le prenom");
 	
 	private JTextField PrenomText = new JTextField(10);
 	
@@ -29,7 +37,6 @@ public class View1 extends JFrame{
 
 	
 	
-	
 	public View1 (){
 		
 		this.setSize(600, 300);
@@ -38,13 +45,19 @@ public class View1 extends JFrame{
 		
 		JPanel panel = new JPanel();
 		
+		panel.add(IdLabel);
+		
 		panel.add(IDtext);
 				
 		panel.add(recherchebtnid);
 		
+		panel.add(Nomlabel);
+		
 		panel.add(Nomtext);
 		
 		panel.add(recherchenom);
+		
+		panel.add(prenomlabel);
 		
 		panel.add(PrenomText);
 		
@@ -55,7 +68,7 @@ public class View1 extends JFrame{
 		
 		this.add(panel);
 		
-		
+		this.setTitle("Recherche");;
 	}
 	
 	
