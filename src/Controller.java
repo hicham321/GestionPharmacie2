@@ -96,6 +96,7 @@ public class Controller {
 					
 					
 					
+					
 					// affiché l'interface de resultat
 					if (v1.getIDtext().isEmpty() || m.isInteger(v1.getIDtext())== false ) {
 						
@@ -116,6 +117,51 @@ public class Controller {
 			}
 			
 			if(arg0.getSource()== v1.getNombtn()){
+				try {
+					
+					//la requete pour recherche pour nom 
+					
+					
+					
+					
+					//si le nom aparteint au base 
+                    if (v1.getNomtext().isEmpty()  ) {
+						
+						JOptionPane.showMessageDialog(null, "Entrer un nom");
+					}
+					else{
+					v2.setVisible(true);
+					v2.getNomtext().setText(v1.getNomtext());
+					v2.getNomtext().setEditable(false);
+					
+					}
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.out.println("Erreur : "+e);
+				}
+				
+			}
+			if(arg0.getSource()==v1.getPrenombtn()){
+				try {
+					//reuete de recherche par prenom 
+					
+					
+					//si le prenom aparteint au base 
+					if (v1.getPrenomtext().isEmpty()) {
+						JOptionPane.showMessageDialog(null, "entrer un prenom ");
+						
+					} else {
+						
+						v2.setVisible(true);
+						v2.getPrenomText().setText(v1.getPrenomtext());
+						v2.getPrenomText().setEditable(false);
+					}
+					
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.out.println("Erreur "+ e);
+				}
 				
 				
 			}

@@ -63,8 +63,8 @@ public class View1 extends JFrame{
 		
 		this.recherchebtnid.addActionListener(listner);
 		this.Annulerbtn.addActionListener(listner);
-		this.Nomtext.addActionListener(listner);
-		this.PrenomText.addActionListener(listner);
+		this.recherchenom.addActionListener(listner);
+		this.rechercheprenom.addActionListener(listner);
 		
 		
 		
@@ -96,6 +96,15 @@ public class View1 extends JFrame{
 		return this.IDtext.getText();
 	}
 	
+	public String getNomtext(){
+		
+		return this.Nomtext.getText();
+	}
+	
+	public String getPrenomtext(){
+		
+		return this.PrenomText.getText() ;
+	}
 	
 	
 

@@ -69,6 +69,15 @@ public class View2 extends JFrame {
 	   
 	   return this.IDtext ;
    }
+   public JTextField getNomtext(){
+	   
+	   return this.NomText;
+   }
+   
+   public JTextField getPrenomText(){
+	   
+	   return this.Prenomtext;
+   }
    
   
 	
