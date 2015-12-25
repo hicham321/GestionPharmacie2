@@ -26,7 +26,7 @@ public class View2 extends JFrame {
 	
 	private JTextField Prenomtext = new JTextField(10);
 	
-	private JLabel creditLabel = new JLabel("Le Nom");
+	private JLabel creditLabel = new JLabel("Le Credit ");
 
 	private JTextField Credittext= new JTextField(10);
 	
