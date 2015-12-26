@@ -30,6 +30,8 @@ public class View2 extends JFrame {
 
 	private JTextField Credittext= new JTextField(10);
 	
+	private JButton ajouteCredit = new JButton("Credit");
+	
 	private JButton Okbtn= new JButton("Ok");
 	
 	public View2 (){
@@ -50,6 +52,7 @@ public class View2 extends JFrame {
 		panel.add(creditLabel);
 		panel.add(Credittext);
 		
+		panel.add(ajouteCredit);
 		panel.add(Okbtn);
 		
 		this.add(panel);
@@ -62,6 +65,7 @@ public class View2 extends JFrame {
 	public void addlistnerview2 (ActionListener listner){
 		
 		this.Okbtn.addActionListener(listner);
+		this.ajouteCredit.addActionListener(listner);
 		
 	}
 	

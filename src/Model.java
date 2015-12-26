@@ -19,7 +19,7 @@ public class Model {
 	
 	
 	// crie une connection vers la base 
-	
+	                               
 	private Connection con ; 
 	
 	private Statement st ;
@@ -64,6 +64,7 @@ public class Model {
 	
 	//dummy method
 	public void insertdata(String nom , int age, String tableName ){
+		
 		try {
 			this.connection();
 			
@@ -313,7 +314,9 @@ public Object [][] donneebase(){
 }
 
 
-// ajouter au credit
+// methode pour ajouter au credit
+
+
 
 
 
